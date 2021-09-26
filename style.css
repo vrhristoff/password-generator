@@ -1,15 +1,25 @@
+:root {
+  --text: #777;
+  --pastel-purple: #e6e6fa;
+  --baby-blue: #91c4f2;
+  --wild-blue: #8ca0d7;
+  --purple: #9d79bc;
+  --purpureus: #a14da0;
+  --violet: #7e1f86;
+}
+
 body {
   max-width: 400px;
   height: 100vh;
   margin: auto;
   color: white;
   display: flex;
-  background-color: #e6e6fa;
+  background-color: var(--pastel-purple);
 }
 
 .card {
   min-height: 400px;
-  background-color: #8ca0d7;
+  background-color: var(--wild-blue);
 }
 
 .card-title {
@@ -24,12 +34,12 @@ body {
   align-items: center;
   margin-left: 0rem;
   margin-right: 0rem;
-  background-color: #e6e6fa;
+  background-color: var(--pastel-purple);
   border-radius: 0.25rem;
 }
 
 .highlight:focus-within {
-  box-shadow: 0 0 0 0.15rem #a14da0;
+  box-shadow: 0 0 0 0.15rem var(--purpureus);
 }
 
 .copy-wrapper {
@@ -44,10 +54,10 @@ body {
 }
 
 .password-result {
-  background-color: #e6e6fa;
+  background-color: var(--pastel-purple);
   padding: 1rem;
   width: 80%;
-  color: #777;
+  color: var(--text);
   border: none;
   border-radius: 0.25rem;
   outline: none;
@@ -59,8 +69,8 @@ body {
 }
 
 .form-control:focus {
-  border-color: #a14da0;
-  box-shadow: 0 0 0 0.05rem #a14da0;
+  border-color: var(--purpureus);
+  box-shadow: 0 0 0 0.05rem var(--purpureus);
 }
 
 .form-check .form-check-input {
@@ -72,13 +82,13 @@ body {
 }
 
 .form-check-input:checked {
-  background-color: #a14da0;
-  border-color: #a14da0;
+  background-color: var(--purpureus);
+  border-color: var(--purpureus);
 }
 
 .btn {
-  background-color: #a14da0;
-  border-color: #a14da0;
+  background-color: var(--purpureus);
+  border-color: var(--purpureus);
 }
 
 .generate-btn {
@@ -87,14 +97,14 @@ body {
 
 .btn:active,
 .btn:hover {
-  background-color: #7e1f86;
-  border-color: #7e1f86;
+  background-color: var(--violet);
+  border-color: var(--violet);
 }
 
 .btn:focus {
-  box-shadow: 0 0 0 0.25rem #a14da0;
-  background-color: #7e1f86;
-  border-color: #7e1f86;
+  box-shadow: 0 0 0 0.25rem var(--purpureus);
+  background-color: var(--violet);
+  border-color: var(--violet);
   animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   transform: translate3d(0, 0, 0);
   perspective: 1000px;
@@ -122,8 +132,8 @@ body {
 }
 
 .btn:disabled {
-  background-color: #9d79bc;
-  border-color: #9d79bc;
+  background-color: var(--purple);
+  border-color: var(--purple);
 }
 
 .btn:disabled:hover {
@@ -132,5 +142,5 @@ body {
 
 input[type="number"]:focus,
 input[type="number"] {
-  color: #777;
+  color: var(--text);
 }
