@@ -10,8 +10,7 @@
 
 body {
   max-width: 400px;
-  height: 100vh;
-  margin: auto;
+  margin: 40px auto;
   color: white;
   display: flex;
   background-color: var(--pastel-purple);
