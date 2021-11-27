@@ -6,13 +6,15 @@
   --purple: #9d79bc;
   --purpureus: #a14da0;
   --violet: #7e1f86;
+
+  --copy-btn-width: 120px;
+  --copy-btn-margin-right: -60px;
 }
 
 body {
   max-width: 400px;
   margin: 40px auto;
   color: white;
-  display: flex;
   background-color: var(--pastel-purple);
 }
 
@@ -94,6 +96,12 @@ body {
   width: 100%;
 }
 
+.generate-btn:focus {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
+
 .btn:active,
 .btn:hover {
   background-color: var(--violet);
@@ -104,9 +112,6 @@ body {
   box-shadow: 0 0 0 0.25rem var(--purpureus);
   background-color: var(--violet);
   border-color: var(--violet);
-  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-  transform: translate3d(0, 0, 0);
-  perspective: 1000px;
 }
 
 @keyframes shake {
@@ -142,4 +147,31 @@ body {
 input[type="number"]:focus,
 input[type="number"] {
   color: var(--text);
+}
+
+.custom-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-tooltip .custom-tooltiptext {
+  visibility: hidden;
+  width: var(--copy-btn-width);
+  background-color: var(--text);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 12px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 50%;
+  margin-left: var(--copy-btn-margin-right);
+}
+
+.custom-tooltip:hover .custom-tooltiptext {
+  visibility: visible;
 }

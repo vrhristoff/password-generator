@@ -30,12 +30,18 @@
                 <div class="card shadow-lg rounded">
                     <div class="card-body">
                       <h5 class="card-title my-4">Password Generator</h5>
-                    
+      
                       <div class="row my-3 highlight">
                             <textarea class="password-result" readonly placeholder="Password" rows="1"></textarea>
-                    
+
                             <div class="copy-wrapper">
-                                <button type="button" class="btn btn-small btn-primary copy-btn">Copy</button>
+                                <div class="custom-tooltip">
+                                    <button type="button" class="btn btn-small btn-primary copy-btn">
+                                        Copy
+                                    </button>
+
+                                    <span class="custom-tooltiptext"></span>
+                                  </div>
                             </div>
                       </div>
 
