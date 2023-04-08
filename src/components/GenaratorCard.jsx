@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import {
     Box,
+    Flex,
     HStack,
     VStack,
     Button,
@@ -15,6 +16,7 @@ import {
     PopoverArrow,
     useDisclosure,
     SlideFade,
+    Image,
 } from '@chakra-ui/react';
 import { CopyIcon } from '@chakra-ui/icons';
 
@@ -23,6 +25,8 @@ import InputField from './InputField';
 import NumberInputField from './NumberInputField';
 
 import { passwordGenerator, noop } from '../services';
+
+import supermanImageSrc from '../images/superman.png';
 
 const GenaratorCard = () => {
     const { onOpen, onClose, isOpen } = useDisclosure();
@@ -64,14 +68,18 @@ const GenaratorCard = () => {
     return (
         <SlideFade in={mounted}>
             <Box rounded="lg" bg={useColorModeValue('white', 'gray.700')} boxShadow="lg" p={8}>
-                <VStack mb={6}>
-                    <Heading fontSize={{ base: '3xl', md: '4xl' }} textAlign="center">
+                <VStack mb={4}>
+                    <Heading fontSize={{ base: '3xl', md: '4xl' }} mb={-1.5} textAlign="center">
                         Password Generator
                     </Heading>
 
-                    <Text fontSize="lg" color={useColorModeValue('gray.600', 'gray.300')}>
-                        supercharge your passwords 🐱‍👤
-                    </Text>
+                    <Flex alignItems="center">
+                        <Text fontSize="lg" color={useColorModeValue('gray.600', 'gray.300')}>
+                            supercharge your passwords
+                        </Text>
+
+                        <Image boxSize={10} objectFit="contain" src={supermanImageSrc} alt="Superman" />
+                    </Flex>
                 </VStack>
 
                 <VStack spacing={6}>
