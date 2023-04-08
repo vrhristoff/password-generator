@@ -67,7 +67,7 @@ const GenaratorCard = () => {
 
     return (
         <SlideFade in={mounted}>
-            <Box rounded="lg" bg={useColorModeValue('white', 'gray.700')} boxShadow="lg" p={8}>
+            <Box rounded="lg" bg={useColorModeValue('white', 'gray.700')} boxShadow="lg" p={6}>
                 <VStack mb={4}>
                     <Heading fontSize={{ base: '3xl', md: '4xl' }} mb={-1.5} textAlign="center">
                         Password Generator
