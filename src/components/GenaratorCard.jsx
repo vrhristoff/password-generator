@@ -125,7 +125,7 @@ const GenaratorCard = () => {
                         }
                     />
 
-                    <HStack spacing={{ base: 0, md: 4 }}>
+                    <HStack spacing={{ base: 2, md: 4 }}>
                         <NumberInputField
                             id="length"
                             label="Length"
