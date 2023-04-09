@@ -35,7 +35,7 @@ const GenaratorCard = () => {
     const [copyInfo, setCopyInfo] = useState('');
     const [password, setPassword] = useState('');
     const [options, setOptions] = useState({
-        length: 16,
+        length: 18,
         spacing: 6,
         includeUppercaseLetters: true,
         includeLowercaseLetters: true,
